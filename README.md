@@ -3,15 +3,20 @@ Utilize this program with the provided links from the DataStax DSE Java Driver m
 
 ## Background
 In this example, the DSE Session (the object by which you will connect to DSE) has been set up as a singleton class. In our example program, the `Session` class is used to ensure there is only one `DseSession` in our program. 
+
 **This is an imperitive step when utilizing any Spring framework for development**
+
 This keeps everything pertaining to the DSE session across our program syncronized. The DSE Java driver utilizes logic under the hood that keeps track of hosts, data centers, in-flight requests, async operations, pooling options, and much more. We want to ensure that the driver has the clearest picture available to it in order to get the best results.
+
 [DSE Driver Documents Page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/)
 
 ## Setup
 See the [DataStax Java driver quick start page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for information on setting up project dependencies.
 
 ### DSE Cluster Builder
-Many of the settings used by the CQL driver code is configured in the connection to the cluster. In our example program, the `Session` class holds our cluster `ContactPoints`, or the IP addresses of the nodes in our local data center. In practice, this could also be read into the program from a configuration file. Here is some example code:
+Many of the settings used by the CQL driver code is configured in the connection to the cluster. In our example program, the `Session` class holds our cluster `ContactPoints`, or the IP addresses of the nodes in our local data center. In practice, this could also be read into the program from a configuration file. 
+
+Here is some example code:
 ```
 private Session() {
         //This list of nodes should only contain nodes from the local data center
