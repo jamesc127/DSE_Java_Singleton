@@ -16,5 +16,6 @@ private Session() {
     }
 ```
 See the [DataStax Java driver quick start page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for more information and additional options.
+Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
 ## Intent
 This sample program is intended to serve as a jumping off point for the DataStax Java Driver and to demonstrate some of the basic functionality that the driver has to offer. Please refer to the [DataStax Java driver manual](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for additional and advanced features. 
