@@ -44,8 +44,6 @@ private Session() {
     }
 ```
 
-Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
-
 ### Load balancing
 The default load balancing policy is TokenAwarePolicy wrapping DCAwareRoundRobinPolicy.  You can configure the DC name used in the DCAwareRoundRobinPolicy which basically applies a filter to the nodes from which the driver chooses to load balance between.
 
@@ -68,7 +66,8 @@ When setting contact points, there are a few principles to follow:
 ### Consistency Level
 DataStax recommends using consistency levels of LOCAL_ONE or LOCAL_QUORUM, as opposed to ONE or QUORUM.  This is true even if the code is running against a single-DC cluster.  The reason for this is that if you later expand your cluster to be a multi-DC cluster, your code will already be in good shape to support this migration.
 You can specify a default consistency level for the cluster, and you can also specify consistency levels on a statement-by-statement basis.
-It is also beneficial to know that Solr queries require a consistency level of `ONE` or `LOCAL_ONE`.
+It is beneficial to know that Solr queries require a consistency level of `ONE` or `LOCAL_ONE`.
+Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
 
 ## Intent
 This sample program is intended to serve as a jumping off point for the DataStax Java Driver and to demonstrate some of the basic functionality that the driver has to offer. Please refer to the [DataStax Java driver manual](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for additional and advanced features. 
