@@ -71,7 +71,7 @@ Also refer to the following blog post about [asynchronous queries with the Java 
 
 ## Statements & Queries
 ### Simple Statements
-Use SimpleStatement for queries that will be executed only once (or a few times) in your application. The `Insert` class in this demo program uses a SimpleStatement for an insert. See the below code, which also examplifies an explicitly stated `ConsistencyLevel` and [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/statements/simple/) for more information.
+Use `SimpleStatement` for queries that will be executed only once (or a few times) in your application. The `Insert` class in this demo program uses a SimpleStatement for an insert. See the below code, which also examplifies an explicitly stated `ConsistencyLevel` and [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/statements/simple/) for more information.
 ```
 //Create a simple statement for an insert. Use this methodology only for infrequent inserts, otherwise use prepared statements
 private static Statement newInsert = new SimpleStatement(
@@ -84,6 +84,23 @@ newInsert.setConsistencyLevel(ConsistencyLevel.LOCAL_ONE);
 iSession.session.execute(newInsert);
 }
 ```   
+
+### Prepared Statements
+Use `PreparedStatement` for queries that are executed multiple times in your application. Prepared statements are more performant, as the nodes can cache the query or insert and re-use instead of having to parse every time. Below is an example of a prepared statement, or [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/statements/prepared/) for more information. Take caution to only prepare the statement once, or errors will be logged in the driver and performance may be impacted.
+```
+insertCustomer = iSession.session.prepare("INSERT INTO java.test_table " +
+                    "(customer_id, first_name, last_name, coords) VALUES (?, ?, ?, ?);");
+for (int i = 0; i <= 2; i++) {
+            iSession.session.execute(insertCustomer
+                            .bind(i+1,firstNames.get(i),lastNames.get(i),pointList.get(i)));
+        }
+```
+
+### Built Statements
+The DataStax Java Driver provides a Fluent API, known as the `QueryBuilder`, for creating queries and inserts. Please [see the javadoc](https://docs.datastax.com/en/drivers/java-dse/1.6/com/datastax/driver/core/querybuilder/QueryBuilder.html) for additional information.
+
+### Asynchronous Programming
+The driver exposes an asynchronous API that allows you to write programs in a fully-non blocking manner. Asynchronous methods return instances of Guava’s `ListenableFuture`, that can be conveniently chained and composed. Please [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/async/) for code examples and more information.
 
 ## Intent
 This sample program is intended to serve as a jumping off point for the DataStax Java Driver and to demonstrate some of the basic functionality that the driver has to offer. Please refer to the [DataStax Java driver manual](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for additional and advanced features. 
