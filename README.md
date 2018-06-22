@@ -47,14 +47,14 @@ private Session() {
 ### Load balancing
 The default load balancing policy is TokenAwarePolicy wrapping DCAwareRoundRobinPolicy.  You can configure the DC name used in the DCAwareRoundRobinPolicy which basically applies a filter to the nodes from which the driver chooses to load balance between.
 
-See: https://docs.datastax.com/en/developer/java-driver/3.5/manual/load_balancing/
+See: https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/load_balancing/
 
 ### Connection pooling
 Connection pooling settings can be configured for local nodes vs remote nodes.  The CQL driver creates connections to each node in the cluster.  It creates a relatively small number of connections and then multiplexes many queries via these channels.  You can control the number of connections it creates initially ("CoreConnections"), the max number of connections it will create ("MaxConnections"), and the number of queries it will push across these connections at a given time ("RequestsPerConnection").
 
 You can also determine whether your client code will talk to non-local data centers (in the case when you have a multi-datacenter cluster).  You will want to decide whether client applications should automatically talk to non-local nodes when local nodes are not accessible.
 
-See: https://docs.datastax.com/en/developer/java-driver/3.5/manual/pooling/ 
+See: https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/pooling/
 
 ### Contact points
 When setting contact points, there are a few principles to follow:
