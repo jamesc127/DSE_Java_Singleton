@@ -67,7 +67,6 @@ When setting contact points, there are a few principles to follow:
 DataStax recommends using consistency levels of LOCAL_ONE or LOCAL_QUORUM, as opposed to ONE or QUORUM.  This is true even if the code is running against a single-DC cluster.  The reason for this is that if you later expand your cluster to be a multi-DC cluster, your code will already be in good shape to support this migration.
 You can specify a default consistency level for the cluster, and you can also specify consistency levels on a statement-by-statement basis.
 It is beneficial to know that Solr queries require a consistency level of `ONE` or `LOCAL_ONE`.
-Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
 
 ## Statements & Queries
 ### Simple Statements
@@ -100,7 +99,7 @@ for (int i = 0; i <= 2; i++) {
 The DataStax Java Driver provides a Fluent API, known as the `QueryBuilder`, for creating queries and inserts. Please [see the javadoc](https://docs.datastax.com/en/drivers/java-dse/1.6/com/datastax/driver/core/querybuilder/QueryBuilder.html) for additional information.
 
 ### Asynchronous Programming
-The driver exposes an asynchronous API that allows you to write programs in a fully-non blocking manner. Asynchronous methods return instances of Guava’s `ListenableFuture`, that can be conveniently chained and composed. Please [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/async/) for code examples and more information.
+The driver exposes an asynchronous API that allows you to write programs in a fully-non blocking manner. Asynchronous methods return instances of Guava’s `ListenableFuture`, that can be conveniently chained and composed. Please [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/async/) for code examples and more information. Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
 
 ## Intent
 This sample program is intended to serve as a jumping off point for the DataStax Java Driver and to demonstrate some of the basic functionality that the driver has to offer. Please refer to the [DataStax Java driver manual](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for additional and advanced features. 
