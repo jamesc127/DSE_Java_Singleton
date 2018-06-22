@@ -69,5 +69,21 @@ You can specify a default consistency level for the cluster, and you can also sp
 It is beneficial to know that Solr queries require a consistency level of `ONE` or `LOCAL_ONE`.
 Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
 
+## Statements & Queries
+### Simple Statements
+Use SimpleStatement for queries that will be executed only once (or a few times) in your application. The `Insert` class in this demo program uses a SimpleStatement for an insert. See the below code, which also examplifies an explicitly stated `ConsistencyLevel` and [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/statements/simple/) for more information.
+```
+//Create a simple statement for an insert. Use this methodology only for infrequent inserts, otherwise use prepared statements
+private static Statement newInsert = new SimpleStatement(
+    "INSERT INTO java.test_table (customer_id, first_name, last_name, coords) " +
+            "VALUES (?, ?, ?, ?);", 4, "Bill", "Clinton", new Point(38.2693, -75.7920));
+            
+//Demonstrating the use of a SimpleStatement with an explicit consistency level.
+public static void insertWithConsistency(){
+newInsert.setConsistencyLevel(ConsistencyLevel.LOCAL_ONE);
+iSession.session.execute(newInsert);
+}
+```   
+
 ## Intent
 This sample program is intended to serve as a jumping off point for the DataStax Java Driver and to demonstrate some of the basic functionality that the driver has to offer. Please refer to the [DataStax Java driver manual](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/) for additional and advanced features. 
