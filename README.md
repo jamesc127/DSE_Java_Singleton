@@ -4,9 +4,9 @@ Utilize this program with the provided links from the DataStax DSE Java Driver m
 ## Background
 In this example, the DSE Session (the object by which you will connect to DSE) has been set up as a singleton class. In our example program, the `Session` class is used to ensure there is only one `DseSession` in our program. 
 
-**This is an imperitive step when utilizing any Spring framework for development**
+**This is an imperative step when utilizing any Spring framework for development**
 
-This keeps everything pertaining to the DSE session across our program syncronized. The DSE Java driver utilizes logic under the hood that keeps track of hosts, data centers, in-flight requests, async operations, pooling options, and much more. We want to ensure that the driver has the clearest picture available to it in order to get the best results.
+This keeps everything pertaining to the DSE session across our program synchronized. The DSE Java driver utilizes logic under the hood that keeps track of hosts, data centers, in-flight requests, async operations, pooling options, and much more. We want to ensure that the driver has the clearest picture available to it in order to get the best results.
 
 [DSE Driver Documents Page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/)
 
@@ -50,12 +50,12 @@ private Session() {
 ```
 
 ### Load balancing
-The default load balancing policy is TokenAwarePolicy wrapping DCAwareRoundRobinPolicy.  You can configure the DC name used in the DCAwareRoundRobinPolicy which basically applies a filter to the nodes from which the driver chooses to load balance between.
+The default load balancing policy is `TokenAwarePolicy` wrapping `DCAwareRoundRobinPolicy`.  You can configure the DC name used in the `DCAwareRoundRobinPolicy` which basically applies a filter to the nodes from which the driver chooses to load balance between.
 
 See: https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/load_balancing/
 
 ### Connection pooling
-Connection pooling settings can be configured for local nodes vs remote nodes.  The CQL driver creates connections to each node in the cluster.  It creates a relatively small number of connections and then multiplexes many queries via these channels.  You can control the number of connections it creates initially ("CoreConnections"), the max number of connections it will create ("MaxConnections"), and the number of queries it will push across these connections at a given time ("RequestsPerConnection").
+Connection pooling settings can be configured for local nodes vs remote nodes.  The CQL driver creates connections to each node in the cluster.  It creates a relatively small number of connections and then multiplexes many queries via these channels.  You can control the number of connections it creates initially (`CoreConnections`), the max number of connections it will create (`MaxConnections`), and the number of queries it will push across these connections at a given time (`RequestsPerConnection`).
 
 You can also determine whether your client code will talk to non-local data centers (in the case when you have a multi-datacenter cluster).  You will want to decide whether client applications should automatically talk to non-local nodes when local nodes are not accessible.
 
@@ -75,7 +75,7 @@ It is beneficial to know that Solr queries require a consistency level of `ONE` 
 
 ## Statements & Queries
 ### Simple Statements
-Use `SimpleStatement` for queries that will be executed only once (or a few times) in your application. The `Insert` class in this demo program uses a SimpleStatement for an insert. See the below code, which also examplifies an explicitly stated `ConsistencyLevel` and [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/statements/simple/) for more information.
+Use `SimpleStatement` for queries that will be executed only once (or a few times) in your application. The `Insert` class in this demo program uses a SimpleStatement for an insert. See the below code, which also exemplifies an explicitly stated `ConsistencyLevel` and [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/statements/simple/) for more information.
 ```
 //Create a simple statement for an insert. Use this methodology only for infrequent inserts, otherwise use prepared statements
 private static Statement newInsert = new SimpleStatement(
@@ -102,6 +102,13 @@ for (int i = 0; i <= 2; i++) {
 
 ### Built Statements
 The DataStax Java Driver provides a Fluent API, known as the `QueryBuilder`, for creating queries and inserts. Please [see the javadoc](https://docs.datastax.com/en/drivers/java-dse/1.6/com/datastax/driver/core/querybuilder/QueryBuilder.html) for additional information.
+
+### Search Indices
+See the below resources for creating simple and complex search queries:
+[Simple index query](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/search/siQuerySyntax.html#siQuerySyntax__siSimpleExpression)
+[Advanced solr query expressions](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/search/siQuerySyntax.html#queriesJSON)
+[Common query parameters](https://wiki.apache.org/solr/CommonQueryParameters)
+[Creating search indices](https://docs.datastax.com/en/dse/5.1/cql/cql/cql_reference/cql_commands/cqlCreateSearchIndex.html)
 
 ### Asynchronous Programming
 The driver exposes an asynchronous API that allows you to write programs in a fully-non blocking manner. Asynchronous methods return instances of Guava’s `ListenableFuture`, that can be conveniently chained and composed. Please [see this page](https://docs.datastax.com/en/developer/java-driver-dse/1.6/manual/async/) for code examples and more information. Also refer to the following blog post about [asynchronous queries with the Java Driver](https://www.datastax.com/dev/blog/java-driver-async-queries)
