@@ -1,6 +1,6 @@
 package com.datastax.dse;
 
-import com.datastax.driver.core.PreparedStatement;
+import com.datastax.driver.core.*;
 import com.datastax.driver.core.policies.DCAwareRoundRobinPolicy;
 import com.datastax.driver.core.policies.TokenAwarePolicy;
 import com.datastax.driver.dse.DseSession;
@@ -15,11 +15,31 @@ public class Session {
     private DseCluster cluster = null;
 
     private Session() {
+        //This list of nodes should only contain nodes from the local data center
+        //This list shouldn't include nodes from other data centers as the driver will treat `LOCAL` as the data center of the first node that it connects to
+        //This list should include more than one node so that the client app can connect when any given node is down
+            String[] clusterNodes = new String[]{"127.0.0.1","127.0.0.2"};
+            String localDC = "local_dc";
             cluster = DseCluster.builder()
-                    .addContactPoint("127.0.0.1")
-                    //Explicitly declare a load balancing policy. Using the default here as an example.
-                    .withLoadBalancingPolicy(new TokenAwarePolicy(DCAwareRoundRobinPolicy.builder().build()))
-                    //.withRetryPolicy(MyRetryPolicy()) //Create a retry policy here if desired
+                    .addContactPoints(clusterNodes)
+                    .withLoadBalancingPolicy(
+                            new TokenAwarePolicy(
+                                    DCAwareRoundRobinPolicy
+                                        .builder()
+                                        .withLocalDc(localDC)
+                                        .build()))
+                    .withPoolingOptions(
+                            new PoolingOptions()
+                            .setCoreConnectionsPerHost(HostDistance.LOCAL,1 )
+                            .setMaxConnectionsPerHost(HostDistance.LOCAL,10 )
+                            .setMaxRequestsPerConnection(HostDistance.LOCAL,32768 )
+                            //by setting these next three values to zero, you're saying never connect to non-local nodes
+                            .setCoreConnectionsPerHost(HostDistance.REMOTE,0 )
+                            .setMaxConnectionsPerHost(HostDistance.REMOTE,0 )
+                            .setMaxRequestsPerConnection(HostDistance.REMOTE,0 ))
+                    .withQueryOptions(
+                            new QueryOptions()
+                            .setConsistencyLevel(ConsistencyLevel.LOCAL_ONE))
                     .build();
             session = cluster.connect();
     }
