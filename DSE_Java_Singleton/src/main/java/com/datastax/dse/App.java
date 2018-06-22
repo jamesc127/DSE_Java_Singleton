@@ -49,10 +49,13 @@ public class App
                 "{'class' : 'SimpleStrategy', 'replication_factor' : '1'};").wasApplied();
         boolean bTable = aSession.execute("CREATE TABLE IF NOT EXISTS java.test_table " +
                 "( customer_id int PRIMARY KEY, first_name text, last_name text, coords 'PointType' );").wasApplied();
-        if (bKeyspace && bTable) complete = true;
+        boolean bIndex = aSession.execute("CREATE SEARCH INDEX IF NOT EXISTS ON java.test_table " +
+                "WITH COLUMNS first_name {indexed:true}, coords {indexed:false} AND OPTIONS {lenient:true};").wasApplied();
+        if (bKeyspace && bTable && bIndex) complete = true;
         if (complete) Inserts.insertStatements();
         if (complete) Inserts.insertWithConsistency();
         if (complete) Inserts.preparedInsertWithConsistency();
+        if (complete) anotherClass.solrQuery();
 
         aSession.close();
         System.exit(0);

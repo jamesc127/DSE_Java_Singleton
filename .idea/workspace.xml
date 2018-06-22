@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3491b81f-e577-4b5f-8f75-958a1df859d8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/timestamp_test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/App$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/Inserts.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/Inserts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/Session.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/anotherClass$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/anotherClass$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/anotherClass$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/anotherClass$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/anotherClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/anotherClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSE_Java_Singleton/target/classes/com/datastax/dse/timestamp_test.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/DSE_Java_Singleton/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,26 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Session.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Session.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="163">
+              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="435">
-                <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -52,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Inserts.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,8 +45,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="223">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +57,8 @@
       <file leaf-file-name="anotherClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+            <state relative-caret-position="367">
+              <caret line="47" column="88" lean-forward="true" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,11 +98,11 @@
         <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Another_Class.java" />
         <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Callback.java" />
         <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Inserts.java" />
-        <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java" />
         <option value="$PROJECT_DIR$/DSE_Java_Singleton/pom.xml" />
-        <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java" />
         <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/timestamp_test.java" />
+        <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java" />
         <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java" />
+        <option value="$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java" />
       </list>
     </option>
   </component>
@@ -150,10 +132,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
-    <option name="width" value="1916" />
-    <option name="height" value="1177" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -161,6 +141,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -199,8 +181,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.timestamp_test">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -305,8 +285,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.timestamp_test" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.timestamp_test" />
       </list>
     </recent_temporary>
   </component>
@@ -331,12 +311,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.07760417" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.11180556" />
       <window_info id="Capture Tool" order="10" />
       <window_info id="Designer" order="2" />
       <window_info id="Project Explorer" order="4" />
@@ -348,17 +328,17 @@
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39982578" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info id="DB Browser" order="5" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32665095" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.19599304" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.35259435" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900944" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123958334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18125" />
       <window_info id="Learn" order="9" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32752612" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -396,16 +376,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/timestamp_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/timestamp_test.java" />
     <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -716,26 +687,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/timestamp_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/timestamp_test.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/GregorianCalendar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -750,30 +702,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Inserts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java">
+    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/anotherClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="367">
+          <caret line="47" column="88" lean-forward="true" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -783,10 +735,20 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="435">
-            <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+          <first_editor relative-caret-position="1545">
+            <caret line="103" column="270" lean-forward="true" selection-start-line="103" selection-start-column="270" selection-end-line="103" selection-end-column="270" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSE_Java_Singleton/src/main/java/com/datastax/dse/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,8 +18,8 @@ public class Session {
         //This list of nodes should only contain nodes from the local data center
         //This list shouldn't include nodes from other data centers as the driver will treat `LOCAL` as the data center of the first node that it connects to
         //This list should include more than one node so that the client app can connect when any given node is down
-            String[] clusterNodes = new String[]{"127.0.0.1","127.0.0.2"};
-            String localDC = "local_dc";
+            String[] clusterNodes = new String[]{"127.0.0.1"};
+            String localDC = "centre-data";
             cluster = DseCluster.builder()
                     .addContactPoints(clusterNodes)
                     .withLoadBalancingPolicy(

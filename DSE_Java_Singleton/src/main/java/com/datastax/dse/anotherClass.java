@@ -41,4 +41,10 @@ public class anotherClass {
         });
         return version;
     }
+
+    public static void solrQuery(){
+        Session searchSession = Session.getInstance();
+        Row row = searchSession.session.execute("SELECT * FROM java.test_table WHERE solr_query='first_name:Bill';").one();
+        System.out.println("The results of the basic Solr query is: " + row.toString());
+    }
 }

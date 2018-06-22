@@ -1,6 +1,5 @@
 com/datastax/dse/Inserts.class
 com/datastax/dse/App$1.class
 com/datastax/dse/anotherClass.class
-com/datastax/dse/timestamp_test.class
 com/datastax/dse/App.class
 com/datastax/dse/Session.class
